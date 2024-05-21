@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div id="signup">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <div id="login">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    <div id="app-container" style="display:none;">
+        <h1>Expense Tracker</h1>
+        <h3 id="welcome-message"></h3>
+        <button onclick="logout()">Logout</button>
+        <div id="add-expense">
+            <h2>Add Expense</h2>
+            <input type="text" id="expense-category" placeholder="Category" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <input type="text" id="expense-comments" placeholder="Comments">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div id="expenses-list">
+            <h2>Your Expenses</h2>
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th>Comments</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="expenses-tbody">
+                    <!-- Expenses will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
